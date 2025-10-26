@@ -29,9 +29,15 @@ export default function Map() {
   const [lng] = useState(MAP_CENTER_LNG);
   const [lat] = useState(MAP_CENTER_LAT);
   const [zoom] = useState(15);
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure component only renders on client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
-    if (map.current) return;
+    if (!isClient || map.current) return;
 
     map.current = new maplibregl.Map({
       container: mapContainer.current,
@@ -51,10 +57,50 @@ export default function Map() {
       "top-right"
     );
 
-    new maplibregl.Marker({ color: "#e56c5c" })
+    const marker = new maplibregl.Marker({ color: "#e56c5c" })
       .setLngLat([MAP_CENTER_LNG, MAP_CENTER_LAT])
       .addTo(map.current);
-  });
+
+    // Add click event to open in Google Maps
+    marker.getElement().addEventListener("click", () => {
+      const googleMapsUrl = `https://www.google.com/maps?q=${MAP_CENTER_LAT},${MAP_CENTER_LNG}`;
+      window.open(googleMapsUrl, "_blank");
+    });
+
+    // Add cursor pointer style to indicate clickability
+    marker.getElement().style.cursor = "pointer";
+    marker
+      .getElement()
+      .setAttribute(
+        "title",
+        "Klicken Sie hier, um den Ort in Google Maps zu öffnen"
+      );
+  }, [isClient, lng, lat, zoom]);
+
+  // Don't render anything on server side
+  if (!isClient) {
+    return (
+      <div
+        style={mapWraperStyle as React.CSSProperties}
+        className="map-wrapper"
+      >
+        <div
+          style={
+            {
+              ...mapContainerStyle,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#f0f0f0",
+              color: "#666",
+            } as React.CSSProperties
+          }
+        >
+          Karte wird geladen...
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={mapWraperStyle as React.CSSProperties} className="map-wrapper">
