@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
+
+//@ts-ignore
+import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 
 //@ts-ignore
-import maplibregl from "!maplibre-gl";
-//@ts-ignore
-import maplibreglWorker from "maplibre-gl/dist/maplibre-gl-csp-worker";
-//@ts-ignore
-maplibregl.workerClass = maplibreglWorker;
+// import maplibreglWorker from "maplibre-gl/dist/maplibre-gl-csp-worker";
+// //@ts-ignore
+// maplibregl.workerClass = maplibreglWorker;
 
 const mapWraperStyle = {
   position: "relative",
@@ -25,7 +26,7 @@ const MAP_CENTER_LAT = 51.046627950628135;
 
 export default function Map() {
   const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef(null);
+  const map = useRef<maplibregl.Map | null>(null);
   const [lng] = useState(MAP_CENTER_LNG);
   const [lat] = useState(MAP_CENTER_LAT);
   const [zoom] = useState(15);
@@ -40,7 +41,7 @@ export default function Map() {
     if (!isClient || map.current) return;
 
     map.current = new maplibregl.Map({
-      container: mapContainer.current,
+      container: mapContainer.current!,
       style: `http://localhost:8000/map/style.json`,
       center: [lng, lat],
       zoom: zoom,
