@@ -10,19 +10,11 @@ import {
   FaLocationDot,
   FaX,
 } from "react-icons/fa6";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { StaticImage } from "gatsby-plugin-image";
 import Map from "../components/Map";
 import Footer from "../components/Footer";
 
-interface IndexPageData {
-  image: {
-    childImageSharp: {
-      gatsbyImageData: any;
-    };
-  };
-}
-
-const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
+const IndexPage: React.FC<PageProps> = () => {
   const [isQualifikationenModalOpen, setIsQualifikationenModalOpen] =
     React.useState(false);
   const [isPraxiserfahrungenModalOpen, setIsPraxiserfahrungenModalOpen] =
@@ -243,10 +235,13 @@ const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
             </div>
             <div className="lg:col-span-4">
               <div className="flex items-center justify-center">
-                <GatsbyImage
-                  image={data.image.childImageSharp.gatsbyImageData}
+                <StaticImage
+                  src="../images/anne-katrin-olbrich.jpg"
                   alt="Anne-Katrin Olbrich"
                   className="w-full"
+                  layout="constrained"
+                  placeholder="blurred"
+                  formats={["auto", "webp", "avif"]}
                 />
               </div>
             </div>
@@ -310,16 +305,6 @@ const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
     </div>
   );
 };
-
-export const query = graphql`
-  query {
-    image: file(relativePath: { eq: "anne-katrin-olbrich.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH)
-      }
-    }
-  }
-`;
 
 export default IndexPage;
 
