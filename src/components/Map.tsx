@@ -29,7 +29,7 @@ export default function Map() {
   const map = useRef<maplibregl.Map | null>(null);
   const [lng] = useState(MAP_CENTER_LNG);
   const [lat] = useState(MAP_CENTER_LAT);
-  const [zoom] = useState(15);
+  const [zoom] = useState(14);
   const [isClient, setIsClient] = useState(false);
 
   // Ensure component only renders on client side
@@ -46,7 +46,16 @@ export default function Map() {
       center: [lng, lat],
       zoom: zoom,
       minZoom: 11,
-      maxZoom: 18,
+      maxZoom: 17,
+      cooperativeGestures: true,
+      locale: {
+        "CooperativeGesturesHandler.WindowsHelpText":
+          "Verwenden Sie Strg + Scrollen, um in die Karte zu zoomen.",
+        "CooperativeGesturesHandler.MacHelpText":
+          "Verwenden Sie ⌘ + Scrollen, um in die Karte zu zoomen.",
+        "CooperativeGesturesHandler.MobileHelpText":
+          "Verwenden Sie zwei Finger, um die Karte zu bewegen.",
+      },
       maxBounds: [
         [13, 50.8],
         [14.4, 51.2],
