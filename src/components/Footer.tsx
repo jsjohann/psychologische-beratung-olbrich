@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="bg-alabaster py-6 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0 text-sm">
+          <div className="mb-4 md:mb-0 text-base">
             <a
               href="/"
               className="text-black hover:text-coral-red transition-colors"
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
               Dr. Anne-Katrin Olbrich
             </a>
           </div>
-          <div className="flex space-x-6 text-sm">
+          <div className="flex space-x-6 text-base">
             <a
               href="/impressum"
               className="text-black hover:text-coral-red transition-colors"

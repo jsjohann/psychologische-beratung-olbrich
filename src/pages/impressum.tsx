@@ -6,13 +6,10 @@ const ImpressumPage = () => {
   return (
     <div className="min-h-screen bg-white font-cabin flex flex-col">
       {/* Header */}
-      <header className="bg-alabaster py-4 px-4">
-        <div className="max-w-4xl mx-auto">
-          <Link
-            to="/"
-            className="text-xl md:text-xl lg:text-2xl text-coral-red hover:text-coral-red/80 transition-colors"
-          >
-            Dr. Anne-Katrin Olbrich
+      <header className="bg-alabaster py-12 px-4">
+        <div className="max-w-4xl mx-auto flex justify-center">
+          <Link to="/" className="hover:opacity-80 transition-opacity">
+            <img src="../Logo.svg" alt="Logo" className="w-24 h-auto" />
           </Link>
         </div>
       </header>
@@ -30,7 +27,7 @@ const ImpressumPage = () => {
                 <h2 className="text-xl text-coral-red mb-2">
                   Angaben gemäß § 5 TMG
                 </h2>
-                <p className="text-md">
+                <p className="text-base">
                   Dr. Anne-Katrin Olbrich
                   <br />
                   Psychologische Beratung
@@ -43,10 +40,34 @@ const ImpressumPage = () => {
 
               <div>
                 <h2 className="text-xl text-coral-red mb-2">Kontakt</h2>
-                <p className="text-md">
-                  Telefon: 0151 – 599 546 10
+                <p className="text-base">
+                  Telefon:{" "}
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const phone = "0151" + "59954610";
+                      window.location.href = "tel:" + phone;
+                    }}
+                    className="hover:underline"
+                    style={{ unicodeBidi: "bidi-override", direction: "rtl" }}
+                  >
+                    01 645 995 – 1510
+                  </a>
                   <br />
-                  E-Mail: anne-katrin.olbrich@t-online.de
+                  E-Mail:{" "}
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const email = "anne-katrin.olbrich" + "@" + "t-online.de";
+                      window.location.href = "mailto:" + email;
+                    }}
+                    className="hover:underline"
+                    style={{ unicodeBidi: "bidi-override", direction: "rtl" }}
+                  >
+                    ed.enilno-t@hcirblo.nirtak-enna
+                  </a>
                 </p>
               </div>
 
@@ -54,7 +75,7 @@ const ImpressumPage = () => {
                 <h2 className="text-xl text-coral-red mb-2">
                   Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
                 </h2>
-                <p className="text-md">
+                <p className="text-base">
                   Dr. Anne-Katrin Olbrich
                   <br />
                   Sternplatz 15
@@ -67,7 +88,7 @@ const ImpressumPage = () => {
                 <h2 className="text-xl text-coral-red mb-2">
                   Haftungsausschluss
                 </h2>
-                <div className="space-y-4 text-md">
+                <div className="space-y-4 text-base">
                   <div>
                     <h3 className="text-lg text-coral-red mb-1">
                       Haftung für Inhalte
