@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Psychologische Beratung Olbrich`,
-    siteUrl: `https://jsjohann.github.io/`,
+    siteUrl: `https://jsjohann.github.io/psychologische-beratung-olbrich`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
