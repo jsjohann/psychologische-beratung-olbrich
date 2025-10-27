@@ -137,13 +137,13 @@ const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
       <section className="bg-alabaster py-24 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8 flex justify-center">
-            <img src="/logo.svg" alt="Logo" className="w-48 h-auto" />
+            <img src="./logo.svg" alt="Logo" className="w-48 h-auto" />
           </div>
           <h1 className="text-2xl md:text-2xl lg:text-3xl text-coral-red mb-1">
             Dr. Anne-Katrin Olbrich
           </h1>
           <p className="text-lg md:text-md text-gray">
-            Psychologische Beratung Dresden
+            Psychologische Beratung in Dresden
           </p>
         </div>
       </section>
