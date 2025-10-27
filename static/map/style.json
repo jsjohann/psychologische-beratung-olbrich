@@ -23,11 +23,11 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "http://localhost:8000/map/metadata.json"
+      "url": "https://jsjohann.github.io/psychologische-beratung-olbrich/map/metadata.json"
     }
   },
-  "sprite": "http://localhost:8000/map/sprite/sprite",
-  "glyphs": "http://localhost:8000/map/fonts/{fontstack}/{range}.pbf?key={key}",
+  "sprite": "https://jsjohann.github.io/psychologische-beratung-olbrich/map/sprite/sprite",
+  "glyphs": "https://jsjohann.github.io/psychologische-beratung-olbrich/map/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
       "id": "background",

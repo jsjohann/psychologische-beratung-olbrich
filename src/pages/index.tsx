@@ -279,7 +279,18 @@ const IndexPage: React.FC<PageProps<IndexPageData>> = ({ data }) => {
                 </div>
                 <div className="flex items-start">
                   <FaEnvelope className="text-white mr-3 flex-shrink-0 mt-1" />
-                  <p className="text-lg">anne-katrin.olbrich@t-online.de</p>
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const email = "anne-katrin.olbrich" + "@" + "t-online.de";
+                      window.location.href = "mailto:" + email;
+                    }}
+                    className="text-lg hover:underline"
+                    style={{ unicodeBidi: "bidi-override", direction: "rtl" }}
+                  >
+                    ed.enilno-t@hcirblo.nirtak-enna
+                  </a>
                 </div>
               </div>
               <p className="text-lg text-white mt-4">
