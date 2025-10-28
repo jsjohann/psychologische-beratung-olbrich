@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
               onClick={() => setIsQualifikationenModalOpen(false)}
               className="text-gray-500 hover:text-gray-700 transition-colors"
             >
-              <FontAwesomeIcon icon={faX} className="text-xl" />
+              <FontAwesomeIcon icon={faX} className="text-xl" size="xl" />
             </button>
           </div>
           <div className="space-y-3 text-black">
@@ -96,7 +96,7 @@ const IndexPage: React.FC<PageProps> = () => {
               onClick={() => setIsPraxiserfahrungenModalOpen(false)}
               className="text-gray-500 hover:text-gray-700 transition-colors"
             >
-              <FontAwesomeIcon icon={faX} className="text-xl" />
+              <FontAwesomeIcon icon={faX} className="text-xl" size="xl" />
             </button>
           </div>
           <div className="space-y-3 text-black">
@@ -152,6 +152,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <FontAwesomeIcon
                   icon={faPersonRays}
                   className="text-7xl text-coral-red"
+                  size="2xl"
                 />
               </div>
               <h3 className="text-2xl text-coral-red mb-1">Lebensberatung</h3>
@@ -166,6 +167,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <FontAwesomeIcon
                   icon={faComments}
                   className="text-7xl text-coral-red"
+                  size="2xl"
                 />
               </div>
               <h3 className="text-2xl text-coral-red mb-1">Paarberatung</h3>
@@ -180,6 +182,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <FontAwesomeIcon
                   icon={faPeopleRoof}
                   className="text-7xl text-coral-red"
+                  size="2xl"
                 />
               </div>
               <h3 className="text-2xl text-coral-red mb-1">Familienberatung</h3>
@@ -194,6 +197,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <FontAwesomeIcon
                   icon={faVideo}
                   className="text-7xl text-coral-red"
+                  size="2xl"
                 />
               </div>
               <h3 className="text-2xl text-coral-red mb-1">
@@ -279,6 +283,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   <FontAwesomeIcon
                     icon={faLocationDot}
                     className="text-white mr-3 flex-shrink-0 mt-1"
+                    size="sm"
                   />
                   <div>
                     <p className="text-xl">Sternplatz 15</p>
@@ -289,6 +294,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   <FontAwesomeIcon
                     icon={faPhone}
                     className="text-white mr-3 flex-shrink-0 mt-1"
+                    size="sm"
                   />
                   <a
                     href="#"
@@ -307,6 +313,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     className="text-white mr-3 flex-shrink-0 mt-1"
+                    size="sm"
                   />
                   <a
                     href="#"
