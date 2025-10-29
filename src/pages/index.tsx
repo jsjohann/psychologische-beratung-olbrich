@@ -33,7 +33,7 @@ const IndexPage: React.FC<PageProps> = () => {
       >
         <div className="p-6">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-3xl lg:text-4xl font-semibold text-coral-red">
+            <h3 className="text-3xl lg:text-4xl text-coral-red">
               Qualifikationen
             </h3>
             <button
@@ -89,7 +89,7 @@ const IndexPage: React.FC<PageProps> = () => {
       >
         <div className="p-6">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-3xl lg:text-4xl font-semibold text-coral-red">
+            <h3 className="text-3xl lg:text-4xl text-coral-red">
               Praxiserfahrungen
             </h3>
             <button
