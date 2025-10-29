@@ -2,8 +2,9 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Psychologische Beratung Olbrich`,
+    title: `Dr. Anne-Katrin Olbrich – Psychologische Beratung Dresden`,
     siteUrl: `https://psychologische-beratung-olbrich.de`,
+    description: `Psychologische Beratung in Dresden – Lebensberatung, Paarberatung, Familienberatung und Marte Meo Therapie`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
