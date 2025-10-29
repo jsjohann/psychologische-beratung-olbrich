@@ -1,3 +1,7 @@
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+config.autoAddCss = false
+
 import "./src/styles/global.css"
 
 // Reset scroll position to top when navigating to a new page
