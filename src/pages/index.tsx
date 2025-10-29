@@ -356,5 +356,11 @@ export const Head: HeadFC = () => (
       name="description"
       content="Psychologische Beratung in Dresden – Lebensberatung, Paarberatung, Familienberatung und Marte Meo Therapie"
     />
+    <meta name="theme-color" content="#e56c5c" />
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="3c1dcc53-1f96-458e-9d8c-16b4892fbfb0"
+    ></script>
   </>
 );
