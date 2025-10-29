@@ -9,7 +9,7 @@ const DatenschutzPage = () => {
       <header className="bg-alabaster py-12 px-4">
         <div className="max-w-4xl mx-auto flex justify-center">
           <Link to="/" className="hover:opacity-80 transition-opacity">
-            <img src="/Logo.svg" alt="Logo" className="w-24 h-auto" />
+            <img src="../Logo.svg" alt="Logo" className="w-24 h-auto" />
           </Link>
         </div>
       </header>
