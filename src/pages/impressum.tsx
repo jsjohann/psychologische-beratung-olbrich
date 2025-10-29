@@ -9,7 +9,7 @@ const ImpressumPage = () => {
       <header className="bg-alabaster py-12 px-4">
         <div className="max-w-4xl mx-auto flex justify-center">
           <Link to="/" className="hover:opacity-80 transition-opacity">
-            <img src="../Logo.svg" alt="Logo" className="w-24 h-auto" />
+            <img src="../logo.svg" alt="Logo" className="w-24 h-auto" />
           </Link>
         </div>
       </header>
@@ -73,51 +73,27 @@ const ImpressumPage = () => {
 
               <div>
                 <h2 className="text-xl text-coral-red mb-2">
-                  Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+                  Verbraucherstreitbeilegung/Universalschlichtungsstelle
                 </h2>
                 <p className="text-base">
-                  Dr. Anne-Katrin Olbrich
-                  <br />
-                  Sternplatz 15
-                  <br />
-                  01067 Dresden
+                  Wir sind nicht bereit oder verpflichtet, an
+                  Streitbeilegungsverfahren vor einer
+                  Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
               </div>
 
               <div>
-                <h2 className="text-xl text-coral-red mb-2">
-                  Haftungsausschluss
-                </h2>
-                <div className="space-y-4 text-base">
-                  <div>
-                    <h3 className="text-lg text-coral-red mb-1">
-                      Haftung für Inhalte
-                    </h3>
-                    <p>
-                      Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für
-                      eigene Inhalte auf diesen Seiten nach den allgemeinen
-                      Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
-                      Diensteanbieter jedoch nicht unter der Verpflichtung,
-                      übermittelte oder gespeicherte fremde Informationen zu
-                      überwachen oder nach Umständen zu forschen, die auf eine
-                      rechtswidrige Tätigkeit hinweisen.
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg text-coral-red mb-1">
-                      Haftung für Links
-                    </h3>
-                    <p>
-                      Unser Angebot enthält Links zu externen Websites Dritter,
-                      auf deren Inhalte wir keinen Einfluss haben. Deshalb
-                      können wir für diese fremden Inhalte auch keine Gewähr
-                      übernehmen. Für die Inhalte der verlinkten Seiten ist
-                      stets der jeweilige Anbieter oder Betreiber der Seiten
-                      verantwortlich.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-sm text-gray-600">
+                  Quelle:{" "}
+                  <a
+                    href="https://www.e-recht24.de/impressum-generator.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    https://www.e-recht24.de/impressum-generator.html
+                  </a>
+                </p>
               </div>
             </div>
           </div>
