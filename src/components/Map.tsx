@@ -42,7 +42,7 @@ export default function Map() {
 
     map.current = new maplibregl.Map({
       container: mapContainer.current!,
-      style: `https://jsjohann.github.io/psychologische-beratung-olbrich/map/style.json`,
+      style: `https://psychologische-beratung-olbrich.de/map/style.json`,
       center: [lng, lat],
       zoom: zoom,
       minZoom: 11,
