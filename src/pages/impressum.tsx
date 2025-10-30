@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { HeadFC, Link } from "gatsby";
 import Footer from "../components/Footer";
 
 const ImpressumPage = () => {
@@ -107,3 +107,10 @@ const ImpressumPage = () => {
 };
 
 export default ImpressumPage;
+
+export const Head: HeadFC = () => (
+  <>
+    <title>Dr. Anne-Katrin Olbrich – Psychologische Beratung Dresden</title>
+    <meta name="robots" content="noindex, nofollow" />
+  </>
+);
