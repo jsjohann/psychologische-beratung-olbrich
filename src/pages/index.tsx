@@ -247,7 +247,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 >
                   Qualifikationen
                 </button>{" "}
-                in psychologischer Beratung und entwicklungsfördernden Methoden
+                in tiefenpsychologischer Beratung und entwicklungsfördernden Methoden
                 wie der Marte Meo Therapie.
               </p>
             </div>
